@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <div class="Student">
+
+    </div>
+
+    <script>
+
+
+// Add Element 
+
+        function addelemt(lang_name) {
+            const New_elemnt = document.createElement("H1")
+
+            New_elemnt.className = "Student_1 "
+
+            New_elemnt.innerHTML = `${lang_name}<b> hi </b>`
+
+            // both have same working 
+            // document.querySelector(".Student").append(New_elemnt)
+            document.querySelector(".Student").appendChild(New_elemnt)
+
+        }
+        addelemt("Hamza")
+
+
+        // this is more optimz way to do 
+        function optimz_addelemt(lang_name) {
+            const New_elemnt = document.createElement("H1")
+
+            New_elemnt.className = "Student_1 "
+
+            New_elemnt.appendChild(document.createTextNode(lang_name))
+
+            document.querySelector(".Student").append(New_elemnt)
+        }
+        optimz_addelemt("Ali")
+
+        // ----------------------------------------------------------------------
+        
+        // Edit element 
+
+
+        const select_lang = document.querySelector("H1:nth-child(1)")
+        //   select_lang.innerHTML= " Rahman"// we can use this but it is not optimze  + inner html also removed 
+
+        // 2nd way 
+        select_lang.textContent = "Nisar"
+
+        // 3rd way 
+
+        const new_way = document.createElement("H1")
+        new_way.textContent = "Shahjahan"
+        select_lang.replaceWith(new_way)
+
+        //---------------------------------------------------------------------------
+
+        // Delete Element 
+
+        const remv_lang = document.querySelector("H1:nth-child(1)")
+
+        remv_lang.remove()
+
+
+    </script>
+
+</body>
+
+</html>
