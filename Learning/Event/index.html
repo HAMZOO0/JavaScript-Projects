@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgba(28, 34, 34, 0.817);">
+
+    <div class="pic">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6893mkpy100-bRe4a8CLxSZ_kzeqO2KGYEF7_R4wrTIt8x2RJzKs9neO932BqYs688Jo&usqp=CAU"
+            alt="" onclick="alert('kasa ha bhi click q kr rahy ho')">
+
+        <!-- here in the attributes i use a onclick event which is not good prataice   -->
+    </div>
+
+    <div class="box">
+        <img class="animal"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Q_nHHWyuoU7xGNbHQ34jFimspJ0J00KJdw&s" alt="">
+    </div>
+
+    <a href="https://www.google.com/">Google</a>
+</body>
+<script>
+    /*  we not use this approch bcz it has less functionalities 
+      document.querySelector(".animal").onclick = function(){
+          alert('3')
+      }
+  
+       good approch syntex : 1st name of event , then function and inside it there is obejct and then event propagration.....
+          document.querySelector(".animal").addEventListener(' event_name',function(event_object),true|false)
+  
+    */
+
+//-----------------------------------------------------------------
+
+    //   event propagation = false = event bubling 
+    //   event propagation = true = event capturaing  
+    //   bubbling travels from the target to the root, and capturing travels from the root to the target.
+    // ex : of bubbling 1st the target work then root 
+    /* document.querySelector(".animal").addEventListener('click', function (e) {
+         alert('zbra clicked')
+     }, false)
+ 
+     document.querySelector(".box").addEventListener('click', function (e) {
+         alert('box clicked')
+     }, false)
+
+ */
+
+    // ex : of capturaing  1st the root work then target 
+    document.querySelector(".animal").addEventListener('click', function (e) {
+        alert('zbra clicked')
+
+    }, true)
+
+    document.querySelector(".box").addEventListener('click', function (e) {
+        alert('box clicked')
+
+        // this is imp function to stop propagation and work on separetly 
+        e.stopPropagation()
+
+    }, true)
+
+    //---------------------------------------------------------
+
+    // now we prevent default behaviour of function when event perform  
+
+    // here i clicked on link then it will not opened  
+    document.querySelector("a").addEventListener('click',function(e){
+        e.preventDefault()
+    })
+
+
+
+</script>
+
+</html>
