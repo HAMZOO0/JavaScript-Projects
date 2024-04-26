@@ -20,3 +20,4 @@ The return value of the 'Function Execution' context is passed to the Global Exe
 
 ![image](https://github.com/HAMZOO0/WEB-DEV/assets/98114762/57673862-b138-4825-bdc3-2c91f6ad723a)
 
+![image](https://github.com/HAMZOO0/JavaScript-/assets/98114762/84d3d36c-3ae8-4c2d-933b-b88f82ff2529)
