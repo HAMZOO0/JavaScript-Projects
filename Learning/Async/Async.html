@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Hi Pakistan </h2>
+
+    <button class="btn">Stop Change </button>
+
+</body>
+<script>
+    // here we select h1 to change it 
+    const h2 = document.querySelector('h2')
+    const btn = document.querySelector('.btn')
+
+    // here we use set-time-out async function  which stored in task queue(register call back ) and perform opration after #ms time 
+    const Refernce_of_setTimeout = setTimeout(() => {
+        h2.innerText = " Hii Boss"
+    }, 3000);
+
+
+    // here we craete a event lister then we click in btn then set-time-out function will not perform bcz we use clear-time-out  which clearn the function from task queue(register call back )
+    btn.addEventListener('click', function () {
+        clearTimeout(Refernce_of_setTimeout)
+        btn.style.backgroundColor='cyan'
+    })
+
+
+
+
+</script>
+
+</html>
+<!-- in js , handler  and call back is functoions 
+    and by uisng the name of function we pass the refernce like : 
+    add() -> functoion call 
+    add -> rffernce  
+
+-->
