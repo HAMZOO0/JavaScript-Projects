@@ -22,6 +22,6 @@ This project is a simple web application that logs keyboard events in real-time.
 
 ---
 ![image](https://github.com/HAMZOO0/JavaScript-/assets/98114762/4aa8875e-3698-42f7-a542-6ca6bf1960ee)
-![image](https://github.com/HAMZOO0/JavaScript-/assets/98114762/b2167dfb-351d-4f6e-86be-878eefec259e)
+
 ![image](https://github.com/HAMZOO0/JavaScript-/assets/98114762/9f3b67d5-3bbf-4341-bf56-2df579daff79)
 
