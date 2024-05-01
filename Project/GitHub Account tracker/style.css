@@ -43,6 +43,8 @@
     align-self: center;
     background-color: rgba(13, 72, 85, 0.635);
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .info {
