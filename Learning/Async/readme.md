@@ -21,7 +21,7 @@ Asynchronous Functions
 setTimeout(() => {
   console.log('Delayed message');
 }, 1000); // Executes after 1 second (1000 milliseconds)
-
+```
 ---
 ![image](https://github.com/HAMZOO0/JavaScript-/assets/98114762/70e4bfab-674b-4817-87f6-492e6403d27a)
 
