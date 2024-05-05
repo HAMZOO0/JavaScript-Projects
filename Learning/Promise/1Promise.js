@@ -15,25 +15,25 @@ const promise1 = new Promise(function (resolve, reject) {
     // network call , DB call etc ...
 
     setTimeout(function () {
-        console.log("Async Task done ");
+        console.log('Async Task done ');
         resolve();
     }, 1000);
 });
 
 // resolve is connected with .then
 promise1.then(function () {
-    console.log("Function done");
+    console.log('Function done');
 });
 
 //  -----------------------------------------------------------------------------------------------
 // synetex 2
 new Promise(function (resolve, reject) {
     setTimeout(function () {
-        console.log("Async Task done ");
+        console.log('Async Task done ');
         resolve();
     }, 1000);
 }).then(function () {
-    console.log("Function done");
+    console.log('Function done');
 });
 
 //  -----------------------------------------------------------------------------------------------
@@ -42,8 +42,8 @@ const promise3 = new Promise(function (resolve, reject) {
     setTimeout(function () {
         // here we are passing obj which use also in .then()
         resolve({
-            name: "Khan",
-            version: "V12",
+            name: 'Khan',
+            version: 'V12',
         });
     }, 1000);
 }).then(function (user) {
@@ -57,8 +57,8 @@ const promise3 = new Promise(function (resolve, reject) {
 const promise4 = new Promise(function (resolve, reject) {
     setTimeout(function () {
         resolve({
-            name: "Khan",
-            version: "V12",
+            name: 'Khan',
+            version: 'V12',
         });
     }, 1000);
 });
@@ -80,7 +80,7 @@ promise4
 
 const promise5 = new Promise(function (resolve, reject) {
     setTimeout(function () {
-        error = false;
+        let error = false;
 
         if (error) {
             resolve();
@@ -92,13 +92,47 @@ const promise5 = new Promise(function (resolve, reject) {
 
 promise5
     .then(() => {
-        console.log(" Done  ");
+        console.log(' Done  ');
     })
     .catch(() => {
-        console.log(" Error  ");
+        console.log(' Error  ');
     })
     .finally(() => {
-        console.log("This function must execute in last ");
+        console.log('This function must execute in last ');
     });
 
 //  -----------------------------------------------------------------------------------------------
+
+const promise6 = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        let error = false;
+        if (error) {
+            resolve({ name: 'Khan', password: '2354fgh' });
+        } else {
+            reject('Error in JS ');
+        }
+    }, 1000);
+});
+
+async function promise5_connection() {
+
+
+    try {
+        const response = await promise6;
+        console.log(response);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+promise5_connection()
+
+
+const FF = fetch("https://api.github.com/users/HAMZOO0")
+FF
+    .then(() => {
+        console.log(this.responseText);
+    })
+    .catch(() => {
+        console.log(' Error  ');
+    })
