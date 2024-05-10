@@ -23,3 +23,5 @@ fetch("https://api.github.com/users/HAMZOO0")
  . catch(()=>{
     
  })
+
+// // to solve this hell we use promises 
