@@ -1,4 +1,0 @@
-In js there are two dataypes 
-1 Primitive(int ,string)  and 2 is non-Primitive data types (obj,array,function) 
-1st type store in stack and 2 will store in heap so 
-the data which store in stac will copy by make a copy and when we copy the data of heap then it pass the refernce so when we change any thing then it casue effect on all refernce . 
