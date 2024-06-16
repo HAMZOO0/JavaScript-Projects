@@ -1,4 +1,3 @@
-
 const countryList = {
     AED: "AE",
     AFN: "AF",
@@ -160,21 +159,3 @@ const countryList = {
     ZMK: "ZM",
     ZWD: "ZW",
   };
-
-const URL = "https://v6.exchangerate-api.com/v6/e8a0fbde30a2922dad080f80/latest/"
-
-const dropdown = document.querySelectorAll(".dropdown")
-const select = document.querySelectorAll("#selectoption")
-
-// for in loop 
-// country_code file name n
-
-    
-    
-        for(currcode in countryList)
-          {
-            let newption = document.createElement("option")
-            select.values=`<option value="" >  ${currcode} </option>`
-         
-          }
-      
