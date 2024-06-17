@@ -160,12 +160,13 @@ const countryList = {
     ZWD: 'ZW',
 };
 
-const URL =
-    'https://v6.exchangerate-api.com/v6/e8a0fbde30a2922dad080f80/latest/';
+const URL = 'https://v6.exchangerate-api.com/v6/e8a0fbde30a2922dad080f80/latest/';
 
 const dropdown = document.querySelectorAll('.dropdown');
 const select = document.querySelectorAll('.selectoption');
 const btn = document.querySelector('Form button');
+const amount = document.querySelector('.amount input'); // accessing the input tag
+const api_kye='e8a0fbde30a2922dad080f80' 
 
 // selection both selec tag and adding all countries  codes
 select.forEach((each) => {
@@ -204,7 +205,22 @@ const updateflag = (element) => {
     img.src = new_img_Src;
 };
 
+
 //
 btn.addEventListener('click', (event) => {
-    event.preventDefault(); // we dont want to submit the form and other page relaod oprations 
+    event.preventDefault(); // we dont want to submit the form and other page relaod oprations
+
+
+    let amount_value = amount.value;
+
+    if (amount_value == '' || amount_value < 1 || ( !/^\d+$/.test(amount_value))) {
+
+      amount.value = "1";
+        amount_value = 1;
+
+        console.log(amount_value);
+    }
+
+    const URL = ` https://v6.exchangerate-api.com/v6/${api_kye}/pair/${from_curr}/${to_curr}/${amount_value}`;
+
 });
