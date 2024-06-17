@@ -166,7 +166,7 @@ const dropdown = document.querySelectorAll('.dropdown');
 const select = document.querySelectorAll('.selectoption');
 const btn = document.querySelector('Form button');
 const amount = document.querySelector('.amount input'); // accessing the input tag
-const api_kye='e8a0fbde30a2922dad080f80' 
+const api_kye='' 
 
 // selection both selec tag and adding all countries  codes
 select.forEach((each) => {
