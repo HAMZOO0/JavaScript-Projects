@@ -160,13 +160,18 @@ const countryList = {
     ZWD: 'ZW',
 };
 
-const URL = 'https://v6.exchangerate-api.com/v6/e8a0fbde30a2922dad080f80/latest/';
+const URL_ = 'https://v6.exchangerate-api.com/v6/e8a0fbde30a2922dad080f80/latest/';
 
 const dropdown = document.querySelectorAll('.dropdown');
 const select = document.querySelectorAll('.selectoption');
 const btn = document.querySelector('Form button');
 const amount = document.querySelector('.amount input'); // accessing the input tag
-const api_kye='' 
+const from_curr = document.querySelector('.from select');
+const to_curr = document.querySelector('.to select');
+const msg =  document.querySelector('.info');
+const api_kye= '' 
+
+
 
 // selection both selec tag and adding all countries  codes
 select.forEach((each) => {
@@ -207,7 +212,7 @@ const updateflag = (element) => {
 
 
 //
-btn.addEventListener('click', (event) => {
+btn.addEventListener('click', async (event) => {
     event.preventDefault(); // we dont want to submit the form and other page relaod oprations
 
 
@@ -218,9 +223,18 @@ btn.addEventListener('click', (event) => {
       amount.value = "1";
         amount_value = 1;
 
-        console.log(amount_value);
     }
 
-    const URL = ` https://v6.exchangerate-api.com/v6/${api_kye}/pair/${from_curr}/${to_curr}/${amount_value}`;
+    // console.log(from_curr , to_curr);
 
+    const URL = ` https://v6.exchangerate-api.com/v6/${api_kye}/pair/${from_curr.value}/${to_curr.value}/${amount_value}`;
+
+    let responce =  await fetch(URL)
+
+    let data = await responce.json()
+
+    // here i am access the conversion_rate 
+    let rate = data.conversion_rate
+
+    msg.textContent = `${amount_value} ${from_curr.value} = ${data.conversion_result} ${to_curr.value} `
 });
