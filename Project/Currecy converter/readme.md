@@ -28,6 +28,8 @@ A web-based **Currency Converter** application that allows users to convert amou
 - **User-Friendly Interface**: Easy to use with a clean and simple layout.
 
 
+![image](https://github.com/HAMZOO0/JavaScript-Projects/assets/98114762/a3c92ca9-1994-4fcb-990f-456d6fe94516)
+![image](https://github.com/HAMZOO0/JavaScript-Projects/assets/98114762/45d2c155-76c1-4ebe-9c3c-d0bda16854b6)
 
 
 
