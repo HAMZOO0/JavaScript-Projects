@@ -10,7 +10,7 @@ This is a simple guessing game implemented in JavaScript. The game generates a r
 4. After each guess, you'll receive feedback on whether your guess was too low, too high, or correct.
 5. You have a maximum of 10 attempts to guess the correct number.
 6. After 10 attempts, the game ends, and the correct answer is revealed.
-
+   
 ## Features
 
 - Generates a random number between 1 and 100.
